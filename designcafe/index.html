@@ -7,6 +7,8 @@
   <!-- CSS読み込み -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <!-- ▼ header -->
@@ -47,8 +49,43 @@
         </ul>
       </nav>
     </div>
+    <div class="hamburger">
+      <span></span>
+    </div>
+    <nav class="header__nav-sp">
+      <ul class="header__nav-items-sp">
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link" href="#aboutus">
+            ABOUT US
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link" href="#menu">
+            MENU
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link" href="#gallery">
+            GALLERY
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link" href="#event">
+            EVENT
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link" href="#access">
+            ACCESS
+          </a>
+        </li>
+      </ul>
+    </nav>
     <div class="slider">
-      <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子の写真">
+      <picture>
+        <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+        <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子の写真">
+      </picture>
     </div>
   </header>
   <!-- ▲ header -->
@@ -65,7 +102,7 @@
           1杯のコーヒーから。
         </p>
         <p class="top__sub-text">
-          毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+          毎日を丁寧に大切に過ごしたい。<br class="sp">だからこそ一杯一杯丁寧にコーヒーを入れ<br>
           足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
         </p>
       </div>
@@ -73,12 +110,31 @@
     <!-- ▲ top -->
     <!-- ▼ aboutus -->
     <section id="aboutus" class="aboutus">
-      <div class="aboutus__inner inner">
+      <div class="aboutus__inner inner pc">
         <img class="pc about__img" src="./images/pc_about-100.jpg" alt="コーヒーで乾杯する様子の写真">
         <div class="aboutus__body">
           <h2 class="aboutus__heading heding">
             <img class="aboutus__heding-img" src="./images/about_us@2x.png" alt="ABOUT US">
           </h2>
+          <p class="aboutus__text-main">
+            私たちが提供する<br>
+            こだわりのコーヒー
+          </p>
+          <p class="aboutus__text-sub">
+            サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+            サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+          </p>
+        </div>
+      </div>
+      <div class="aboutus__inner-sp sp">
+        <h2 class="aboutus__heading heding">
+          <img class="aboutus__heding-img" src="./images/about_us@2x.png" alt="ABOUT US">
+        </h2>
+        <img class="about__img" src="./images/about_us@2x-100.jpg" alt="コーヒーで乾杯する様子の写真">
+        <div class=" inner">
           <p class="aboutus__text-main">
             私たちが提供する<br>
             こだわりのコーヒー
@@ -102,7 +158,8 @@
         </h2>
         <ul class="menu__items">
           <li class="menu__item">
-            <img class="menu__img" src="./images/pc_menu_drink-100.jpg" alt="カフェオレの写真">
+            <img class="menu__img pc" src="./images/pc_menu_drink-100.jpg" alt="カフェオレの写真">
+            <img class="menu__img sp" src="./images/drink_sp@2x-100.jpg" alt="カフェオレの写真">
             <h3 class="menu__title">
               Drink
             </h3>
@@ -112,7 +169,8 @@
             </p>
           </li>
           <li class="menu__item">
-            <img class="menu__img" src="./images/pc_menu_food-100.jpg" alt="パスタの写真">
+            <img class="menu__img pc" src="./images/pc_menu_food-100.jpg" alt="パスタの写真">
+            <img class="menu__img sp" src="./images/food_sp@2x-100.jpg" alt="パスタの写真">
             <h3 class="menu__title">
               Food
             </h3>
@@ -122,7 +180,8 @@
             </p>
           </li>
           <li class="menu__item">
-            <img class="menu__img" src="./images/pc_menu_sweets-100.jpg" alt="ケーキの写真">
+            <img class="menu__img pc" src="./images/pc_menu_sweets-100.jpg" alt="ケーキの写真">
+            <img class="menu__img sp" src="./images/cake_sp@2x-100.jpg" alt="ケーキの写真">
             <h3 class="menu__title">
               Sweets
             </h3>
@@ -142,11 +201,12 @@
       </h2>
       <div class="gallery__img-box slider">
         <!-- ↓デザインカンプと逆の並びになっていますが、スライダーになるところかと思うので番号順に記載してます↓ -->
-        <img class="gallery__img" src="./images/pc_gallary_01-100.jpg" alt="コーヒーにミルクをそそぐ写真">
-        <img class="gallery__img" src="./images/pc_gallary_02-100.jpg" alt="店内のカフェメニューの写真">
-        <img class="gallery__img" src="./images/pc_gallary_03-100.jpg" alt="カフェカウンター側の様子の写真">
-        <img class="gallery__img" src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真">
-        <img class="gallery__img" src="./images/pc_gallary_05-100.jpg" alt="カフェ客席側の様子の写真">
+        <img class="gallery__img pc" src="./images/pc_gallary_01-100.jpg" alt="コーヒーにミルクをそそぐ写真">
+        <img class="gallery__img pc" src="./images/pc_gallary_02-100.jpg" alt="店内のカフェメニューの写真">
+        <img class="gallery__img pc" src="./images/pc_gallary_03-100.jpg" alt="カフェカウンター側の様子の写真">
+        <img class="gallery__img pc" src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真">
+        <img class="gallery__img pc" src="./images/pc_gallary_05-100.jpg" alt="カフェ客席側の様子の写真">
+        <img class="gallery__img sp" src="./images/mobile_gallery-100.jpg" alt="カフェカウンター側の様子の写真">
       </div>
     </section>
     <!-- ▲ gallery -->
@@ -224,5 +284,14 @@
     </div>
   </footer>
   <!-- ▲ footer -->
+  <!-- ▼ JS -->
+  <script>
+    $(function () {
+      $(".hamburger").on("click", function() {
+        $(".hamburger").toggleClass("open");
+        $(".header__nav-sp").fadeToggle();
+      });
+    });
+  </script>
 </body>
 </html>
