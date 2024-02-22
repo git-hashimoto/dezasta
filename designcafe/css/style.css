@@ -134,6 +134,7 @@ body {
 .aboutus__text-sub {
   font-size: 16px;
   line-height: 1.62;
+  text-align: justify;
   margin-top: 35px;
 }
 
