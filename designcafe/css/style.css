@@ -169,6 +169,7 @@ body {
 .menu__text {
   font-size: 17px;
   line-height: 1.23;
+  text-align: justify;
   margin-top: 25px;
 }
 
@@ -473,9 +474,7 @@ body {
   }
 
   .aboutus__text-sub {
-    font-size: 15px;
     line-height: 1.74;
-    text-align: justify;
     margin-top: 35px;
   }
 
@@ -510,7 +509,6 @@ body {
 
   .menu__text {
     line-height: 1.58;
-    text-align: justify;
     margin-top: 30px;
   }
 
