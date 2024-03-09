@@ -6,9 +6,18 @@
   <title>DESIGN CAFE</title>
   <!-- CSS読み込み -->
   <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- ▼ slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <!-- ▼ lighbox -->
+  <link rel="stylesheet" href="css/lightbox.min.css">
+
   <link rel="stylesheet" href="./css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
   <!-- ▼ header -->
@@ -85,6 +94,10 @@
       <picture>
         <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
         <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子の写真">
+      </picture>
+      <picture>
+        <source srcset="./images/sp_main_vs_2@2x-100.jpg" media="(max-width: 767px)">
+        <img src="./images/slider_2.jpg" alt="カフェ店内の様子の写真">
       </picture>
     </div>
   </header>
@@ -199,14 +212,25 @@
       <h2 class="gallery__heading heding">
         <img class="gallery__heading-img" src="./images/gallery@2x.png" alt="GALLERY">
       </h2>
-      <div class="gallery__img-box slider">
-        <!-- ↓デザインカンプと逆の並びになっていますが、スライダーになるところかと思うので番号順に記載してます↓ -->
-        <img class="gallery__img pc" src="./images/pc_gallary_01-100.jpg" alt="コーヒーにミルクをそそぐ写真">
-        <img class="gallery__img pc" src="./images/pc_gallary_02-100.jpg" alt="店内のカフェメニューの写真">
-        <img class="gallery__img pc" src="./images/pc_gallary_03-100.jpg" alt="カフェカウンター側の様子の写真">
-        <img class="gallery__img pc" src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真">
-        <img class="gallery__img pc" src="./images/pc_gallary_05-100.jpg" alt="カフェ客席側の様子の写真">
-        <img class="gallery__img sp" src="./images/mobile_gallery-100.jpg" alt="カフェカウンター側の様子の写真">
+      <div class="gallery__img-box slider--gallery">
+        <a class="gallery__img" href="./images/pc_gallary_01-100.jpg" data-lightbox="demo-group" title="ラテ">
+          <img src="./images/pc_gallary_01-100.jpg" alt="コーヒーにミルクをそそぐ写真">
+        </a>
+        <a class="gallery__img" href="./images/pc_gallary_02-100.jpg" data-lightbox="demo-group" title="カフェメニュー">
+          <img src="./images/pc_gallary_02-100.jpg" alt="店内のカフェメニューの写真">
+        </a>
+        <a class="gallery__img" href="./images/pc_gallary_03-100.jpg" data-lightbox="demo-group" title="内装">
+          <img src="./images/pc_gallary_03-100.jpg" alt="カフェカウンター側の様子の写真">
+        </a>
+        <a class="gallery__img" href="./images/pc_gallary_04-100.jpg" data-lightbox="demo-group" title="コーヒー豆">
+          <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真">
+        </a>
+        <a class="gallery__img" href="./images/pc_gallary_05-100.jpg" data-lightbox="demo-group" title="内装">
+          <img src="./images/pc_gallary_05-100.jpg" alt="カフェ客席側の様子の写真">
+        </a>
+        <a class="gallery__img" href="./images/mobile_gallery-100.jpg" data-lightbox="demo-group" title="内装">
+          <img src="./images/mobile_gallery-100.jpg" alt="カフェカウンター側の様子の写真">
+        </a>
       </div>
     </section>
     <!-- ▲ gallery -->
@@ -245,7 +269,8 @@
         <img class="access__heading-img" src="./images/access@2x.png" alt="ACCESS">
       </h2>
       <div class="map">
-        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853707484!2d139.76454987634298!3d35.681240529972506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1707179268502!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.769987525454!2d139.6990608760261!3d35.65803823124716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1708670847467!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853707484!2d139.76454987634298!3d35.681240529972506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1707179268502!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
       </div>
     </section>
     <!-- ▲ access -->
@@ -292,6 +317,41 @@
         $(".header__nav-sp").fadeToggle();
       });
     });
+
+    $(function() {
+      $(".slider").slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        dots: true
+      });
+    })
+
+    $('.slider--gallery').slick({
+      autoplay:true,
+      autoplaySpeed: 4000,
+      slidesToShow: 5,
+      responsive:[{
+        breakpoint: 768,
+        settings: {
+        slidesToShow: 1,
+        }
+      }],
+      respondTo: 'slider'
+    });
+
+    $(window).on('scroll', function(){
+      if ($(window).scrollTop() > 200) {
+        $('.top-btn').fadeIn(500);
+      } else {
+        $('.top-btn').fadeOut(500);
+      }
+    });
+    $('.top-btn').click(function () {
+      $('body, html').animate({ scrollTop: 0 }, 700);
+      return false;
+    });
   </script>
+  <script src="js/lightbox.min.js"></script>
 </body>
 </html>
