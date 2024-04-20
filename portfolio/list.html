@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ぴーすでざいん</title>
+  <!-- ▼ JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- ▼ CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/subpage.css">
+  <!-- ▼ fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/gnd8bcm.css">
+</head>
+<body>
+  <!-- ▼ header -->
+  <header class="header">
+    <div class="header__inner inner">
+      <h1 class="header__name">
+        <a href="./index.html">
+          <img class="logo" src="./images/logo.svg" alt="ぴーすでざいん">
+        </a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a class="nav__link nav__link--header" href="./index.html#about">私について</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--header" href="./index.html#works">制作実績</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--header" href="./index.html#skills">スキル</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ▲ header -->
+  <!-- ▼ main -->
+  <main class="main">
+    <!-- ▼ パンくずリスト -->
+    <div class="breadcrumb-navigation">
+      <div class="breadcrumb-navigation__inner inner">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <!-- 1つめ -->
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="./index.html">
+                <span itemprop="name">トップ</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <!-- 2つめ -->
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="./list.html">
+                <span itemprop="name">制作実績一覧</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!-- ▲ パンくずリスト -->
+    <!-- ▼ 制作実績一覧 -->
+    <section class="works-list sub-page">
+      <div class="works-list__inner sub-page__inner inner">
+        <h2 class="heading">
+          WORKS
+          <span class="heading-ja">
+            制作実績
+          </span>
+        </h2>
+        <ul class="works-list__items">
+          <li class="works-list__item">
+            <a class="works-list__link works__link" href="./work1.html">
+              <img src="./images/img-work-01.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                デザイン
+              </span>
+              キャンペーン告知バナー
+            </h3>
+          </li>
+          <li class="works__item">
+            <a class="works-list__link works__link" href="./work2.html">
+              <img src="./images/img-work-02.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                デザイン
+              </span>
+              旅行アプリバナー
+            </h3>
+          </li>
+          <li class="works__item">
+            <a class="works-list__link works__link" href="./work3.html">
+              <img src="./images/img-work-03.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                デザイン
+              </span>
+              ハンバーガーバナー
+            </h3>
+          </li>
+          <li class="works__item">
+            <a class="works-list__link works__link" href="./work4.html">
+              <img src="./images/img-work-04.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                デザイン
+              </span>
+              会員制コワーキングLP
+            </h3>
+          </li>
+          <li class="works__item">
+            <a class="works-list__link works__link" href="./work5.html">
+              <img src="./images/img-work-05.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                デザイン
+              </span>
+              美容院リニューアルLP
+            </h3>
+          </li>
+          <li class="works__item">
+            <a class="works-list__link works__link" href="./work6.html">
+              <img src="./images/img-work-06.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                サイト制作
+              </span>
+              デザインカフェサイト
+            </h3>
+          </li>
+          <li class="works__item">
+            <a class="works-list__link works__link" href="./work7.html">
+              <img src="./images/img-work-07.png" alt="">
+            </a>
+            <h3 class="works__title common__sub-title">
+              <span class="works__type">
+                デザイン/サイト制作
+              </span>
+              ポートフォリオ
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ▲ 制作実績一覧 -->
+  </main>
+  <!-- ▲ main -->
+  <!-- ▼ footer -->
+  <footer class="footer">
+    <div class="footer__inner inner">
+      <div class="footer__contents">
+        <img class="logo" src="./images/logo.svg" alt="ぴーすでざいん">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html#about">私について</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html#works">制作実績</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html#skills">スキル</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">
+        Copyright &COPY; 2024  All Rights Reserved.
+      </p>
+    </div>
+    <div class="top-btn">
+      <a class="top-link" href="#header">
+        <img class="top-btn__img" src="./images/btn-blue.png" alt="PAGE TOP">
+        TOP
+      </a>
+    </div>
+  </footer>
+  <!-- ▲ footer -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
