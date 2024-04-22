@@ -1,3 +1,29 @@
+// ローディング画面
+$(window).on('load',function(){
+    $("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+  });
+});
+
+//ファーストビュー順番に表示
+$(function() {
+  $(document).ready(function(){
+    $(".kv__text").delay(2300).fadeIn(1000);
+  });
+});
+
+// ハンバーガーメニュー
+$(function () {
+  $(".hamburger,.header__nav-sp,.header__nav-link").on("click", function() {
+    $(".hamburger").toggleClass("open");
+    $(".header__nav-sp").fadeToggle();
+  });
+});
+
+
+// フェードイン
+AOS.init();
+
 // ヘッダー下スクロール非表示/上スクロール表示
 const header = $('.header');
 const headerHeight = header.outerHeight();
@@ -36,3 +62,18 @@ $('.top-btn').click(function () {
   return false;
 });
 
+// スライダー
+$(function() {
+  $(".slider").slick({
+    centerMode: true,
+    centerPadding: '5%',
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    infinite: true,
+    variableWidth: true,
+    nextArrow: false,
+    prevArrow: false
+  });
+});

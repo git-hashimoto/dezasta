@@ -4,56 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ぴーすでざいん</title>
-  <!-- ▼ slick -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <!-- ▼ JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- ▼ slick -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <!-- ▼ fadein -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- ▼ CSS -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/top.css">
   <!-- ▼ fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/gnd8bcm.css">
+  <!-- ▼ ファビコン -->
+  <link rel="icon" type="image/png" sizes="16x16"  href="./images/favicons/favicon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <!-- ▼ header -->
-  <header id="header" class="header DownMove">
+  <header id="header" class="header">
     <div class="header__inner inner">
       <h1 class="header__name">
         <a href="./index.html">
           <img class="logo" src="./images/logo.svg" alt="ぴーすでざいん">
         </a>
       </h1>
-      <nav class="nav">
-        <ul class="nav__items">
-          <li class="nav__item">
-            <a class="nav__link nav__link--header" href="#about">私について</a>
+      <nav class="header__nav nav">
+        <ul class="header__nav-items nav__items">
+          <li class="header__nav-item nav__item">
+            <a class="header__nav-link nav__link nav__link--header" href="#about">私について</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--header" href="#works">制作実績</a>
+          <li class="header__nav-item nav__item">
+            <a class="header__nav-link nav__link nav__link--header" href="#works">制作実績</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--header" href="#skills">スキル</a>
+          <li class="header__nav-item nav__item">
+            <a class="header__nav-link nav__link nav__link--header" href="#skills">スキル</a>
           </li>
         </ul>
       </nav>
     </div>
+    <div class="hamburger">
+      <span></span>
+    </div>
+    <nav class="header__nav-sp">
+      <ul class="header__nav-items-sp">
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link nav__link" href="#about">
+            私について
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link nav__link" href="#works">
+            制作実績
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link nav__link" href="#skills">
+            スキル
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!-- ▲ header -->
+  <div id="splash">
+    <div id="splash-logo">
+      <p class="loading__text">LOADING...</p>
+      <span class="loading__img"><img src="/images/loading.png" alt="" width="100"></span>
+    </div>
+  </div>
   <!-- ▼ kv -->
   <div class="kv">
-    <img src="./images/mainview-pc.jpg" class="kv__img" alt="パズルを持った人のイラスト">
+    <picture>
+      <source class="kv__img" srcset="./images/mainview-sp.jpg" media="(max-width: 767px)">
+      <img class="kv__img" src="./images/mainview-pc.jpg" alt="パズルを持った人のイラスト">
+    </picture>
     <p class="kv__text">
       あなたのイメージに<br>
-      ぴったりハマるデザインを
+      ぴったりハマる<br class="sp">デザインを
     </p>
   </div>
   <!-- ▲ kv -->
   <!-- ▼ main -->
   <main class="main">
-    <div class="main-message__contents">
+    <div class="main-message__contents" data-aos="fade-up">
       <p class="main-message__text">
         お客様の考えのピース<br>
         私の考えのピース<br>
@@ -65,42 +103,41 @@
     </div>
     <div class="slide__text-item">
       <div class="slide__inner">
-        <img class="slide__text" src="./images/text.svg" alt="PEACE×PIECE">
-        <img class="slide__text" src="./images/text.svg" alt="PEACE×PIECE">
-        <img class="slide__text" src="./images/text.svg" alt="PEACE×PIECE">
       </div>
     </div>
     <!-- ▼ about -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up">
       <div class="wrapper">
         <div class="back back--left"></div>
         <div class="about__inner inner">
-          <h2 class="heading">
-            ABOUT
-            <span class="heading-ja">
-              私について
-            </span>
-          </h2>
-          <div class="about__contents">
-            <div class="box"></div>
-            <!-- <img src="" alt=""> -->
-            <div class="about-text__contents">
-              <p class="about__text-name text">
-                橋本　美保
-              </p>
-              <p class="about__text text">
-                埼玉県出身、埼玉県在住。
-                これまで接客業、インフラエンジニア、フロントエンドエンジニアを経験し、現在はECサイトのWEB更新作業を担当しております。
-                前職でデザインカンプを元にWEB制作をしている中で、自分でもデザインを作れるようになりたいと思ったことがきっかけでデザインの勉強を始めました。
-                お客様の要望を丁寧に汲み取りカタチにしていきたいと考えています。
-              </p>
-              <p class="about__text-like text">
-                すきなこと
-              </p>
-              <p class="about__text text">
-                ゲーム、アニメ、マンガ、スポーツ、動物
-                ねこがすきで今は黒猫を飼っています。毎日たくさんの癒しをもらっています。
-              </p>
+          <div class="sp__inner sp__inner--right">
+            <h2 class="heading">
+              ABOUT
+              <span class="heading-ja">
+                私について
+              </span>
+            </h2>
+            <div class="about__contents">
+              <div class="box"></div>
+              <!-- <img src="" alt=""> -->
+              <div class="about-text__contents">
+                <p class="about__text-name text">
+                  橋本　美保
+                </p>
+                <p class="about__text text">
+                  埼玉県出身、埼玉県在住。
+                  これまで接客業、インフラエンジニア、フロントエンドエンジニアを経験し、現在はECサイトのWEB更新作業を担当しております。
+                  前職でデザインカンプを元にWEB制作をしている中で、自分でもデザインを作れるようになりたいと思ったことがきっかけでデザインの勉強を始めました。
+                  お客様の要望を丁寧に汲み取りカタチにしていきたいと考えています。
+                </p>
+                <p class="about__text-like text">
+                  すきなこと
+                </p>
+                <p class="about__text text">
+                  ゲーム、アニメ、マンガ、スポーツ、動物
+                  ねこがすきで今は黒猫を飼っています。毎日たくさんの癒しをもらっています。
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -108,95 +145,97 @@
     </section>
     <!-- ▲ about -->
     <!-- ▼ works -->
-    <section id="works" class="works">
+    <section id="works" class="works" data-aos="fade-up">
       <div class="wrapper">
         <div class=" back back--right"></div>
         <div class="works__inner inner">
-          <h2 class="heading">
+          <h2 class="heading sp__inner--left">
             WORKS
             <span class="heading-ja">
               制作実績
             </span>
           </h2>
-          <ul class="works__items slider">
-            <li class="works__item">
-              <a class="works__link" href="./work1.html">
-                <img src="./images/img-work-01.png" alt="キャンペーン告知バナー">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  デザイン
-                </span>
-                キャンペーン告知バナー
-              </h3>
-            </li>
-            <li class="works__item">
-              <a class="works__link" href="./work2.html">
-                <img src="./images/img-work-02.png" alt="旅行アプリバナー">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  デザイン
-                </span>
-                旅行アプリバナー
-              </h3>
-            </li>
-            <li class="works__item">
-              <a class="works__link" href="./work3.html">
-                <img src="./images/img-work-03.png" alt="ハンバーガーバナー">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  デザイン
-                </span>
-                ハンバーガーバナー
-              </h3>
-            </li>
-            <li class="works__item">
-              <a class="works__link" href="./work4.html">
-                <img src="./images/img-work-04.png" alt="会員制コワーキングLP">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  デザイン
-                </span>
-                会員制コワーキングLP
-              </h3>
-            </li>
-            <li class="works__item">
-              <a class="works__link" href="./work5.html">
-                <img src="./images/img-work-05.png" alt="美容院リニューアルLP">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  デザイン
-                </span>
-                美容院リニューアルLP
-              </h3>
-            </li>
-            <li class="works__item">
-              <a class="works__link" href="./work6.html">
-                <img src="./images/img-work-06.png" alt="デザインカフェサイト">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  サイト制作
-                </span>
-                デザインカフェサイト
-              </h3>
-            </li>
-            <li class="works__item">
-              <a class="works__link" href="./work7.html">
-                <img src="./images/img-work-01.png" alt="ポートフォリオ">
-              </a>
-              <h3 class="works__title sub-heading">
-                <span class="works__type">
-                  デザイン/サイト制作
-                </span>
-                ポートフォリオ
-              </h3>
-            </li>
-          </ul>
+          <div class="slider__area">
+            <ul class="works__items slider">
+              <li class="works__item">
+                <a class="works__link" href="./work1.html">
+                  <img src="./images/img-work-01.png" alt="キャンペーン告知バナー">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    デザイン
+                  </span>
+                  キャンペーン告知バナー
+                </h3>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./work2.html">
+                  <img src="./images/img-work-02.png" alt="旅行アプリバナー">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    デザイン
+                  </span>
+                  旅行アプリバナー
+                </h3>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./work3.html">
+                  <img src="./images/img-work-03.png" alt="ハンバーガーバナー">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    デザイン
+                  </span>
+                  ハンバーガーバナー
+                </h3>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./work4.html">
+                  <img src="./images/img-work-04.png" alt="会員制コワーキングLP">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    デザイン
+                  </span>
+                  会員制コワーキングLP
+                </h3>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./work5.html">
+                  <img src="./images/img-work-05.png" alt="美容院リニューアルLP">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    デザイン
+                  </span>
+                  美容院リニューアルLP
+                </h3>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./work6.html">
+                  <img src="./images/img-work-06.png" alt="デザインカフェサイト">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    サイト制作
+                  </span>
+                  デザインカフェサイト
+                </h3>
+              </li>
+              <li class="works__item">
+                <a class="works__link .works__link--top" href="./work7.html">
+                  <img src="./images/img-work-07.png" alt="ポートフォリオ">
+                </a>
+                <h3 class="works__title sub-heading">
+                  <span class="works__type">
+                    デザイン/サイト制作
+                  </span>
+                  ポートフォリオ
+                </h3>
+              </li>
+            </ul>
+          </div>
           <div class="view-btn">
             <a class="view-link" href="./list.html">
               <img class="view-btn__img" src="./images/btn-orange.png" alt="もっとみるボタン">
@@ -208,7 +247,7 @@
     </section>
     <!-- ▲ works -->
     <!-- ▼ skills -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" data-aos="fade-up">
       <div class="wrapper">
         <div class=" back back--left"></div>
         <div class="skills__inner inner">
@@ -232,7 +271,7 @@
               <h3 class="sub-heading skill__sub-title">
                 デザイン
               </h3>
-              <img class="skill__puzzle-icon" src="./images/icon-design.svg" alt="パレットのアイコン" width="110px" height="123px">
+              <img class="skill__puzzle-icon design-icon" src="./images/icon-design.svg" alt="パレットのアイコン" width="110px" height="123px">
               <p class="skills__text text">
                 デザインの基礎を習得しており、
                 バナーやLP制作を行っています。
@@ -243,7 +282,7 @@
               <h3 class="sub-heading skill__sub-title">
                 コーディング
               </h3>
-              <img class="skill__puzzle-icon" src="./images/icon-program.svg" alt="パソコンのアイコン" width="110px" height="123px">
+              <img class="skill__puzzle-icon code-icon" src="./images/icon-program.svg" alt="パソコンのアイコン" width="110px" height="123px">
               <p class="skills__text text">
                 HTML,CSS,Javascript,jQueryを
                 使用した コーディングが可能です。
@@ -263,16 +302,16 @@
     <div class="footer__inner inner">
       <div class="footer__contents">
         <img class="logo" src="./images/logo.svg" alt="ぴーすでざいん">
-        <nav class="nav">
-          <ul class="nav__items">
-            <li class="nav__item">
-              <a class="nav__link" href="#about">私について</a>
+        <nav class="footer__nav nav">
+          <ul class="footer__nav-items nav__items">
+            <li class="footer__nav-item nav__item">
+              <a class="footer__nav-link nav__link" href="#about">私について</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#works">制作実績</a>
+            <li class="footer__nav-item nav__item">
+              <a class="footer__nav-link nav__link" href="#works">制作実績</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#skills">スキル</a>
+            <li class="footer__nav-item nav__item">
+              <a class="footer__nav-link nav__link" href="#skills">スキル</a>
             </li>
           </ul>
         </nav>
@@ -282,7 +321,7 @@
       </p>
     </div>
     <div class="top-btn">
-      <a class="top-link" href="#header">
+      <a class="top-link" href="">
         <img class="top-btn__img" src="./images/btn-blue.png" alt="PAGE TOP">
         TOP
       </a>

@@ -35,21 +35,97 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 1200px) {
+  .back  {
+    max-width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 50px 0;
+  }
+
+  .sp__inner--left {
+    padding-left: 20px;
+  }
+
+  .sp__inner--right {
+    padding-right: 20px;
+  }
+
+  .back {
+    max-width: calc(100vw - 20px);
+  }
+}
+
+/* ----------------------
+      ローディング画面
+---------------------- */
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #ede2da;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading__text {
+  font-family: 'antique-olive';
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  padding-bottom: 15px;
+}
+
+.loading__img{
+  width: 100px;
+  display: inline-block;
+  animation:10s linear infinite rotation1;
+}
+
+@keyframes rotation1{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg); }
+}
+
+@media screen and (max-width: 768px) {
+  .loading__text {
+    font-size: 30px;
+  }
+
+  .loading__img{
+    width: 80px;
+  }
+}
+
 /* ----------------------
       キービジュアル
 ---------------------- */
 .kv {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
 
+.kv,
 .kv__img {
   height: 100vh;
 }
 
 .kv__text {
+  display: none;
   font-size: 40px;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -59,6 +135,20 @@
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1055px) {
+  .kv__text {
+    font-size: 28px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .kv__text {
+    font-size: 28px;
+    top: 30%;
+  }
 }
 
 /* ----------------------
@@ -86,19 +176,50 @@
   overflow: hidden;
 }
 
-.slide__inner {
+/* .slide__inner {
   width: 883px;
   display: flex;
   padding-inline: 0;
   gap: 100px;
   position: relative;
   animation: flowing 20s linear infinite;
+} */
+
+.slide__inner {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  background-image: url(../images/text.svg);
+  background-repeat: repeat-x;
+  background-size: 964px 67px;
+  animation: slide 30s linear infinite;
 }
 
-/* アニメーション */
-@keyframes flowing {
+/* 流れるテキストアニメーション */
+@keyframes slide {
+  0% {
+    background-position: 0 0;
+  }
   100% {
-    transform: translateX(-100%);
+    background-position: -2000px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-message__contents {
+    padding-top: 80px;
+  }
+
+  .main-message__text {
+    font-size: 18px;
+  }
+
+  .slide__text-item {
+    margin-top: 70px;
+  }
+
+  .slide__inner {
+    background-size: 664px 47px;
   }
 }
 
@@ -139,6 +260,51 @@
   margin-top: 30px;
 }
 
+@media screen and (max-width: 1300px) {
+  .about-text__contents  {
+    width: calc(100% - 380px);
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    margin-top: 70px;
+  }
+
+  .about__contents {
+    flex-direction: column;
+  }
+
+  .about-text__contents {
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .about__contents {
+    margin-top: 30px;
+  }
+
+  .about-text__contents {
+    margin-top: 30px;
+  }
+
+  .about__text-name {
+    font-size: 18px;
+  }
+
+  .about__text-like {
+    font-size: 16px;
+  }
+}
+
 /* ----------------------
           WORKS
 ---------------------- */
@@ -147,15 +313,92 @@
 }
 
 .works__items {
-	width: 100vw;
   display: flex;
-  column-gap: 40px;
-  margin-right: 40px;
   margin: 0 calc(50% - 50vw);
   margin-top: 70px;
 }
 
-/* SKILLS */
+.slick-slide img{
+  width: 575px;
+}
+
+.view-btn__img:hover {
+  animation:swing 0.8s ease-out;
+}
+
+@keyframes swing {
+  0%    { transform:translate(0, 0); }
+  16.6% { transform:translate(20px, 0); animation-timing-function:ease-in; }
+  33.3% { transform:translate(0, 0); }
+  50% { transform:translate(20px, 0); animation-timing-function:ease-in; }
+  100%  { transform:translate(0, 0); }
+}
+
+/* スライダー */
+.slider__area {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.slider__area.w300 {
+  max-width: 300px;
+}
+.slick-slide {
+  margin: 0 40px;
+}
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-dots {
+  display: none;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+}
+.slick-active {
+  opacity: 1;
+}
+.slick-current {
+  opacity: 1;
+}
+.thumb {
+  margin: 20px 0 0;
+}
+.thumb .slick-slide {
+  cursor: pointer;
+}
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+.full-screen .slick-list {
+  overflow: visible;
+}
+.full-screen.slider {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .works {
+    margin-top: 70px;
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+  }
+
+  .slick-slide img {
+    width: 295px;
+  }
+}
+
+/* ----------------------
+        SKILLS
+---------------------- */
 .skills {
   margin-top: 100px;
 }
@@ -229,3 +472,76 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 1050px) {
+  .skill__puzzle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .skill__puzzle {
+    height: 656px;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(../images/skills-puzzle-sp.png);
+    background-size: cover;
+    flex-direction: column;
+    margin-right: 20px;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    margin-top: 70px;
+  }
+
+  .skill__sub-title {
+    font-size: 18px;
+  }
+
+  .skills__icons {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .skill-icon {
+    width: 80px;
+  }
+
+  .skill__puzzle {
+    height: 656px;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(../images/skills-puzzle-sp.png);
+    background-size: cover;
+    flex-direction: column;
+    margin-right: 20px;
+    padding-top: 0;
+  }
+
+  .skill-text__contents:first-child {
+    padding: 0;
+    margin: 0;
+  }
+
+  .view-btn {
+    width: 78px;
+    font-size: 12px;
+  }
+
+  .design-icon {
+    width: 80px;
+    height: 91px;
+  }
+
+  .code-icon {
+    width: 80px;
+    height: 70px;
+  }
+
+  .skill__puzzle-icon {
+    margin: 0 auto;
+  }
+}

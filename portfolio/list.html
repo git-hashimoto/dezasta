@@ -6,36 +6,65 @@
   <title>ぴーすでざいん</title>
   <!-- ▼ JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- ▼ fadein -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- ▼ CSS -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/subpage.css">
   <!-- ▼ fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/gnd8bcm.css">
+  <!-- ▼ ファビコン -->
+  <link rel="icon" type="image/png" sizes="16x16"  href="./images/favicons/favicon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <!-- ▼ header -->
-  <header class="header">
+  <header id="header" class="header">
     <div class="header__inner inner">
       <h1 class="header__name">
         <a href="./index.html">
           <img class="logo" src="./images/logo.svg" alt="ぴーすでざいん">
         </a>
       </h1>
-      <nav class="nav">
-        <ul class="nav__items">
-          <li class="nav__item">
-            <a class="nav__link nav__link--header" href="./index.html#about">私について</a>
+      <nav class="header__nav nav">
+        <ul class="header__nav-items nav__items">
+          <li class="header__nav-item nav__item">
+            <a class="header__nav-link nav__link nav__link--header" href="./index.html#about">私について</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--header" href="./index.html#works">制作実績</a>
+          <li class="header__nav-item nav__item">
+            <a class="header__nav-link nav__link nav__link--header" href="./index.html#about">制作実績</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--header" href="./index.html#skills">スキル</a>
+          <li class="header__nav-item nav__item">
+            <a class="header__nav-link nav__link nav__link--header" href="./index.html#about">スキル</a>
           </li>
         </ul>
       </nav>
     </div>
+    <div class="hamburger">
+      <span></span>
+    </div>
+    <nav class="header__nav-sp">
+      <ul class="header__nav-items-sp">
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link nav__link" href="./index.html#about">
+            私について
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link nav__link" href="./index.html#works">
+            制作実績
+          </a>
+        </li>
+        <li class="header__nav-item-sp">
+          <a class="header__nav-link nav__link" href="./index.html#skills">
+            スキル
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!-- ▲ header -->
   <!-- ▼ main -->
@@ -74,7 +103,7 @@
           </span>
         </h2>
         <ul class="works-list__items">
-          <li class="works-list__item">
+          <li class="works-list__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work1.html">
               <img src="./images/img-work-01.png" alt="">
             </a>
@@ -85,7 +114,7 @@
               キャンペーン告知バナー
             </h3>
           </li>
-          <li class="works__item">
+          <li class="works__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work2.html">
               <img src="./images/img-work-02.png" alt="">
             </a>
@@ -96,7 +125,7 @@
               旅行アプリバナー
             </h3>
           </li>
-          <li class="works__item">
+          <li class="works__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work3.html">
               <img src="./images/img-work-03.png" alt="">
             </a>
@@ -107,7 +136,7 @@
               ハンバーガーバナー
             </h3>
           </li>
-          <li class="works__item">
+          <li class="works__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work4.html">
               <img src="./images/img-work-04.png" alt="">
             </a>
@@ -118,7 +147,7 @@
               会員制コワーキングLP
             </h3>
           </li>
-          <li class="works__item">
+          <li class="works__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work5.html">
               <img src="./images/img-work-05.png" alt="">
             </a>
@@ -129,7 +158,7 @@
               美容院リニューアルLP
             </h3>
           </li>
-          <li class="works__item">
+          <li class="works__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work6.html">
               <img src="./images/img-work-06.png" alt="">
             </a>
@@ -140,7 +169,7 @@
               デザインカフェサイト
             </h3>
           </li>
-          <li class="works__item">
+          <li class="works__item" data-aos="fade-up">
             <a class="works-list__link works__link" href="./work7.html">
               <img src="./images/img-work-07.png" alt="">
             </a>
@@ -163,17 +192,19 @@
       <div class="footer__contents">
         <img class="logo" src="./images/logo.svg" alt="ぴーすでざいん">
         <nav class="nav">
-          <ul class="nav__items">
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html#about">私について</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html#works">制作実績</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html#skills">スキル</a>
-            </li>
-          </ul>
+          <nav class="footer__nav nav">
+            <ul class="footer__nav-items nav__items">
+              <li class="footer__nav-item nav__item">
+                <a class="footer__nav-link nav__link" href="./index.html#about">私について</a>
+              </li>
+              <li class="footer__nav-item nav__item">
+                <a class="footer__nav-link nav__link" href="./index.html#works">制作実績</a>
+              </li>
+              <li class="footer__nav-item nav__item">
+                <a class="footer__nav-link nav__link" href="./index.html#skills">スキル</a>
+              </li>
+            </ul>
+          </nav>
         </nav>
       </div>
       <p class="copyright">
@@ -181,7 +212,7 @@
       </p>
     </div>
     <div class="top-btn">
-      <a class="top-link" href="#header">
+      <a class="top-link" href="">
         <img class="top-btn__img" src="./images/btn-blue.png" alt="PAGE TOP">
         TOP
       </a>
