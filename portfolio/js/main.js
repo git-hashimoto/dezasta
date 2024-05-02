@@ -14,7 +14,7 @@ $(function() {
 
 // ハンバーガーメニュー
 $(function () {
-  $(".hamburger,.header__nav-sp,.header__nav-link").on("click", function() {
+  $(".hamburger,.header__nav-sp,.header__nav-link-sp").on("click", function() {
     $(".hamburger").toggleClass("open");
     $(".header__nav-sp").fadeToggle();
   });
@@ -28,15 +28,23 @@ AOS.init();
 const header = $('.header');
 const headerHeight = header.outerHeight();
 let beforeScrollTop = 0;
+
 $(window).scroll(function () {
+  const windowWidth = $(window).width();
+  // PC用の処理
+  if (windowWidth >= 768) {
     const scrollTop = $(this).scrollTop();
     if((scrollTop > beforeScrollTop) && (scrollTop > headerHeight)) {
-        header.addClass('js_hide');
-    }
-    else {
-        header.removeClass('js_hide');
+      header.addClass('js_hide');
+    } else {
+      header.removeClass('js_hide');
     }
     beforeScrollTop = scrollTop;
+  }
+  // SP用の処理
+  else {
+    $(".header").show();
+  }
 });
 
 //ページ内リンクスムーススクロール

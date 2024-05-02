@@ -35,6 +35,13 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 1300px) {
+.sp__inner--left {
+  padding-left: 6%;
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   .back  {
     max-width: calc(100vw - 40px);
@@ -262,7 +269,7 @@
 }
 
 @media screen and (max-width: 1300px) {
-  .about-text__contents  {
+  .about-text__contents {
     width: calc(100% - 380px);
     padding-right: 80px;
   }
@@ -341,12 +348,15 @@
   margin: 0 auto;
   padding: 0 25px;
 }
+
 .slider__area.w300 {
   max-width: 300px;
 }
+
 .slick-slide {
   margin: 0 40px;
 }
+
 .slick-slide img {
   width: 100%;
   height: auto;
@@ -359,18 +369,23 @@
 .slick-slide {
   transition: all ease-in-out .3s;
 }
+
 .slick-active {
   opacity: 1;
 }
+
 .slick-current {
   opacity: 1;
 }
+
 .thumb {
   margin: 20px 0 0;
 }
+
 .thumb .slick-slide {
   cursor: pointer;
 }
+
 .thumb .slick-slide:hover {
   opacity: .7;
 }
@@ -473,10 +488,9 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
   .skill__puzzle {
-    margin-left: 0;
-    margin-right: 0;
+    margin-right: 6%;
   }
 }
 
@@ -491,6 +505,7 @@
     margin-right: 20px;
     padding-top: 0;
   }
+
   .skill-text__contents.design,
   .skill-text__contents.coding{
     position: relative;

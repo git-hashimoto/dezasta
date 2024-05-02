@@ -41,13 +41,17 @@
 .works-list__items {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 50px;
+  column-gap: 4%;
   row-gap: 70px;
   margin-top: 70px;
 }
 
+.works-list__item {
+  width: 48%;
+}
+
 .works-list__link {
-  width: 525px;
+  /* width: 525px; */
 }
 
 /* ----------------------
@@ -160,8 +164,12 @@
     margin-top: 55px;
   }
 
+  .works-list__item {
+    width: 100%;;
+  }
+
   .works-list__link {
-    width: 335px;
+    /* width: 335px; */
   }
 
   .works-detail__title {
