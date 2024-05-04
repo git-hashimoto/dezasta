@@ -470,7 +470,8 @@
 }
 
 .skills__text {
-  margin-top: 15px;
+  width: 90%;
+  margin: 15px auto 0;
 }
 
 .view-btn {
